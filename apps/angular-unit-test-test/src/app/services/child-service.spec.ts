@@ -4,17 +4,12 @@ import { ParentService } from './parent-service';
 
 describe('ChildService', () => {
   let service: ChildService;
-  let parentServiceMock: jest.Mocked<ParentService>;
 
   beforeEach(() => {
-    parentServiceMock = {
-        multiplyMethod: jest.fn().mockReturnValue(5)
-    } as jest.Mocked<ParentService>;
 
     TestBed.configureTestingModule({
       providers: [
-        ChildService,
-        { provide: ParentService, useValue: parentServiceMock }
+        ChildService
       ]
     });
 

@@ -4,6 +4,9 @@ export default {
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   coverageDirectory: '../../coverage/apps/angular-unit-test-test',
   transform: {
+    // 'ts-jest': {
+    //   isolatedModules: true
+    // },
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',
       {
